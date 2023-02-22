@@ -1,0 +1,61 @@
+<section class="contacts-hero">
+  <div class="container contacts-hero__container">
+    <h1 class="contacts-hero__header">контакти</h1>
+    <div class="contacts-hero__tumb">
+      <div class="contacts-hero__wrapper">
+        <div class="player">
+          <video
+            src="./video/contact-page-video.mp4"
+            class="video"
+            controls
+          ></video>
+          <div class="controls">
+            <div class="controls__play">
+              <img
+                class="play__btn"
+                src="./images/contact-page-hero/play-button-mob.svg"
+                alt="play"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contacts-hero__text">
+        <p class="contacts-hero__par">
+          Людина уперше побачивши процес 3D друку може легко захопитися
+          спостереженням за цим процесом не на десяток хвилин.
+        </p>
+        <p class="contacts-hero__par">
+          Наша команда створює timelapse відео що б ви могли краще ознайомитися
+          з технологією 3D друку і просто помилуватися красою цього процесу.
+        </p>
+        <p class="contacts-hero__par">Приємного перегляду!</p>
+        <span class="contacts-hero__span"> &#x1f609;</span>
+      </div>
+    </div>
+    <div class="figure1 z-index"></div>
+    <div class="figure2 z-index"></div>
+  </div>
+
+  <script>
+    const video = document.querySelector('.video'),
+      playBtn = document.querySelector('.controls__play'),
+      playBtnImg = document.querySelector('.play__btn');
+
+    //play
+
+    function toggleVideoStatus() {
+      if (video.paused) {
+        video.play();
+        playBtnImg;
+      } else {
+        video.pause();
+      }
+    }
+    playBtn.addEventListener('click', toggleVideoStatus);
+
+    document.querySelector('.controls').onclick = function () {
+      this.style.display = 'none';
+    };
+  </script>
+</section>
